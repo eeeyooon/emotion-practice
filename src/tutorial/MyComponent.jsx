@@ -15,10 +15,23 @@ function MyComponent() {
     backgroundColor: "yellow",
   });
 
+  const color = "lightblue";
+
   return (
     <>
       <div css={decoration}>노란색 영역</div>
       <div css={style}>Some Hotpink Text</div>
+      <div
+        css={css`
+          background-color: hotpink;
+          &:hover {
+            color: ${color};
+            font-weight: bold;
+          }
+        `}
+      >
+        Tis has a hotpink background
+      </div>
     </>
   );
 }
